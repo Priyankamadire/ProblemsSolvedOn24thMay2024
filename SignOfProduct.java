@@ -34,3 +34,16 @@ Constraints:
 1 <= nums.length <= 1000
 -100 <= nums[i] <= 100
 */
+class SignOfProduct {
+    public int arraySign(int[] nums) {
+       int prod=1;
+        int n = nums.length;
+         for(int num:nums){
+            if(num==0){
+                return 0;
+            }
+            prod*=num>0?1:-1;
+         }
+         return prod>0?1:-1;
+    }
+}
